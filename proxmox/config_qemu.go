@@ -128,7 +128,7 @@ func (config ConfigQemu) CreateVm(vmr *VmRef, client *Client) (err error) {
 	}
 
 	if config.QemuIso != "" {
-		params["ide2"] = config.QemuIso + ",media=cdrom"
+		params["scsi2"] = config.QemuIso + ",media=cdrom"
 	}
 
 	if config.Bios != "" {
